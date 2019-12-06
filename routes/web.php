@@ -11,13 +11,13 @@
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-
 Route::get('/', function () {
-	return redirect('/blog');
+    return view('welcome');
 });
+
+//Route::get('/', function () {
+//	return redirect('/blog');
+//});
 
 Route::get('/blog', 'BlogController@index')->name('blog.home');
 Route::get('/blog/{slug}', 'BlogController@showPost')->name('blog.detail');
